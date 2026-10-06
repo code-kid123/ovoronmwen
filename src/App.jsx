@@ -1454,6 +1454,60 @@ function HomePage({ go, notify }) {
         </div>
       </section>
 
+      {/* ═══════════════ WELCOME FILM · VIDEO SPOTLIGHT ═══════════════ */}
+      <section className="relative overflow-hidden bg-slate-50 py-20 sm:py-24">
+        <div className="absolute -top-32 left-1/4 w-96 h-96 rounded-full bg-benin-bronze/10 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 right-1/4 w-96 h-96 rounded-full bg-benin-green/10 blur-3xl pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Reveal>
+              <span className="inline-flex items-center gap-2 rounded-full bg-benin-green/10 ring-1 ring-benin-green/20 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-benin-green">
+                <Crown className="h-4 w-4 text-benin-bronze" /> Official Introduction Video
+              </span>
+              <h2 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl font-black text-benin-green-dark leading-tight">
+                Welcome to <span className="text-benin-bronze">Alkebulan.</span>
+              </h2>
+              <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+                Press play to hear the vision of Ovonramwen Limited — a sworn mission to restore the welfare the
+                Empire once guaranteed its people.
+              </p>
+            </Reveal>
+          </div>
+
+          <Reveal delay={150}>
+            <figure className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-3xl border-2 border-amber-500/30 shadow-2xl">
+              <div className="relative aspect-video overflow-hidden bg-black">
+                <video
+                  src="/bulan.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 h-full w-full object-cover"
+                >
+                  Your browser does not support the video tag.{' '}
+                  <a href="/bulan.mp4" download className="underline">Download /bulan.mp4</a> to watch offline.
+                </video>
+                <span className="pointer-events-none absolute left-4 top-4 z-10 inline-flex items-center gap-1.5 rounded-full bg-black/50 backdrop-blur px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                  <Play className="h-3 w-3 fill-current text-benin-gold" /> The Vision of Alkebulan
+                </span>
+              </div>
+              <figcaption className="flex flex-col gap-3 bg-benin-green-dark px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm font-semibold text-white/80">
+                  "Free Food, Education, Shelter &amp; Dignity for Every African." — The Ovonramwen Promise
+                </p>
+                <a
+                  href="/bulan.mp4"
+                  download
+                  className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl bg-benin-gold px-4 py-2 text-xs font-bold text-benin-green-dark transition-all duration-300 hover:bg-benin-gold-light"
+                >
+                  <Download className="h-3.5 w-3.5" /> Download Video
+                </a>
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ═══════════════ STATS ═══════════════ */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
